@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Calculadora" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/btn_operator</item>
+        <item name="colorPrimaryVariant">@color/btn_operator</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+    </style>
+
+    <style name="BtnBase" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="BtnNumber" parent="BtnBase">
+        <item name="backgroundTint">@color/btn_number</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="rippleColor">@color/ripple_light</item>
+    </style>
+
+    <style name="BtnFunction" parent="BtnBase">
+        <item name="backgroundTint">@color/btn_function</item>
+        <item name="android:textColor">@color/text_on_function</item>
+        <item name="rippleColor">@color/ripple_light</item>
+    </style>
+
+    <style name="BtnOperator" parent="BtnBase">
+        <item name="backgroundTint">@color/btn_operator</item>
+        <item name="android:textColor">@color/text_on_operator</item>
+        <item name="rippleColor">@color/ripple_dark</item>
+    </style>
+
+    <style name="BtnEquals" parent="BtnBase">
+        <item name="backgroundTint">@color/btn_equals</item>
+        <item name="android:textColor">@color/text_on_operator</item>
+        <item name="rippleColor">@color/ripple_dark</item>
+    </style>
+</resources>
