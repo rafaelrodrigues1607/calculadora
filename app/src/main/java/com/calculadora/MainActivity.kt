@@ -226,7 +226,7 @@ class MainActivity : AppCompatActivity() {
         return tokens
     }
 
-    private fun parseAddSub(tokens: List<String>, pos: intArrayOf): BigDecimal {
+    private fun parseAddSub(tokens: List<String>, pos: IntArray): BigDecimal {
         var left = parseMulDiv(tokens, pos)
         while (pos[0] < tokens.size && tokens[pos[0]] in listOf("+", "-")) {
             val op = tokens[pos[0]++]
@@ -236,7 +236,7 @@ class MainActivity : AppCompatActivity() {
         return left
     }
 
-    private fun parseMulDiv(tokens: List<String>, pos: intArrayOf): BigDecimal {
+    private fun parseMulDiv(tokens: List<String>, pos: IntArray): BigDecimal {
         var left = parseNumber(tokens, pos)
         while (pos[0] < tokens.size && tokens[pos[0]] in listOf("*", "/")) {
             val op = tokens[pos[0]++]
@@ -251,7 +251,7 @@ class MainActivity : AppCompatActivity() {
         return left
     }
 
-    private fun parseNumber(tokens: List<String>, pos: intArrayOf): BigDecimal {
+    private fun parseNumber(tokens: List<String>, pos: IntArray): BigDecimal {
         if (pos[0] >= tokens.size) throw IllegalArgumentException("Unexpected end")
         return toBigDecimal(tokens[pos[0]++])
     }
